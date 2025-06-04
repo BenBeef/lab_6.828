@@ -1,0 +1,218 @@
+sed "s/localhost:1234/localhost:26000/" < .gdbinit.tmpl > .gdbinit
+make[1]: Entering directory '/home/bee/6.828/lab'
++ cc kern/init.c
++ ld obj/kern/kernel
++ mk obj/kern/kernel.img
+make[1]: 'obj/fs/fs.img' is up to date.
+make[1]: Leaving directory '/home/bee/6.828/lab'
+qemu-system-i386 -drive file=obj/kern/kernel.img,index=0,media=disk,format=raw -serial mon:stdio -gdb tcp::26000 -D qemu.log -smp 1 -drive file=obj/fs/fs.img,index=1,media=disk,format=raw 
+6828 decimal is 15254 octal!
+Physical memory: 131072K available, base = 640K, extended = 130432K
+check_page_free_list() succeeded!
+check_page_alloc() succeeded!
+check_page() succeeded!
+check_kern_pgdir() succeeded!
+check_page_free_list() succeeded!
+check_page_installed_pgdir() succeeded!
+SMP: CPU 0 found 1 CPU(s)
+enabled interrupts: 1 2 4
+icode startup
+icode: open /motd
+FS is running
+FS can do I/O
+Device 1 presence: 1
+[flush_block] -------- addr:10001000 
+[flush_block] -------- addr:10001000 
+[flush_block] -------- addr:10001000 
+[flush_block] -------- addr:10001000 
+block cache is good
+superblock is good
+bitmap is good
+[fs_init] -------- finish super.addr:10001000 
+[flush_block--->alloc_block] -------- dirty:0 
+[flush_block] -------- addr:10002000 
+alloc_block is good
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+file_open is good
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+file_get_block is good
+[flush_block--->file_flush] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[flush_block] -------- addr:10003000 
+file_flush is good
+[flush_block--->file_set_size] -------- dirty:0 
+[file_truncate_blocks] -------- dirty:0, bno:0 oldsize:25, newsize:0 
+[file_free_block--->file_block_walk] -------- dirty:0, file_name:newmotd 
+[flush_block--->file_block_walk] -------- dirty:0 
+[flush_block] -------- addr:1006b000 
+file_truncate is good
+[flush_block--->file_set_size] -------- dirty:0 
+[flush_block] -------- addr:1006b000 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[flush_block--->alloc_block] -------- dirty:0 
+[flush_block] -------- addr:10002000 
+[flush_block] -------- addr:1006b000 
+[flush_block--->file_flush] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[flush_block] -------- addr:10003000 
+file rewrite is good
+[serve_open] -------- dirty:0, path:/motd, mode:00000000 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+icode: read /motd
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+This is /motd, the message of the day.
+
+Welcome to the JOS kernel, now with a file system!
+
+icode: close /motd
+[flush_block--->file_flush] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+icode: spawn /init
+[00001001] -------------------- arg:init 
+[00001001] -------------------- arg:initarg1 
+[00001001] -------------------- arg:initarg2 
+[spawn]------------ 1 prog:/init
+[serve_open] -------- dirty:0, path:/init, mode:00000000 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[spawn]------------ 2 prog:/init
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_flush] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+icode: exiting
+init: running
+init: data seems okay
+init: bss seems okay
+init: args: 'init' 'initarg1' 'initarg2'
+init: running sh
+init: starting sh
+[00001002] -------------------- arg:sh 
+[spawn]------------ 1 prog:/sh
+[serve_open] -------- dirty:0, path:/sh, mode:00000000 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[spawn]------------ 2 prog:/sh
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_flush] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[00001002] -------- shared --------- va=d0000000 
+[00001002] -------- shared --------- va=d0001000 
+$ heecho hello world | cat
+[sh.c] -------------  buf:echo hello world | cat
+LINE: echo hello world | cat
+BEFORE FORK
+FORK: 4099
+FORK: 0
+[sh.c|||||] ------------- 
+PIPE: 2 3
+[00001003] SPAWN: /echo hello world
+[spawn]------------ 1 prog:/echo
+[00001004] SPAWN: /cat
+[spawn]------------ 1 prog:/cat
+[serve_open] -------- dirty:0, path:/echo, mode:00000000 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[spawn]------------ 2 prog:/echo
+[flush_block--->file_flush] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+elf magic eebfd9c4 want 464c457f
+spawn /echo: file is not a valid executable
+[00001003] WAIT pipe_child 00001004
+[serve_open] -------- dirty:0, path:, mode:00000000 
+[spawn]------------ 2 prog:/cat
+[file_get_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[flush_block--->file_flush] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+[file_flush--->file_block_walk] -------- dirty:0 
+[flush_block--->file_block_walk] -------- dirty:0 
+elf magic 6d77656e want 464c457f
+spawn /cat: file is not a valid executable
+[00001003] wait finished
+$ 
