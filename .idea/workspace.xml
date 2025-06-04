@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70e1c9e5-86b5-4431-a8c2-45bcae5268d5" name="Changes" comment="6.828 lab1 &#10;update at &#10;├── inc&#10;│   ├── assert.h&#10;│   ├── trap.h&#10;│   └── x86.h&#10;├── kern&#10;│   ├── env.c&#10;│   ├── init.c&#10;│   ├── kdebug.c&#10;│   ├── monitor.c&#10;│   ├── pmap.c&#10;│   ├── sched.c&#10;│   ├── syscall.c&#10;│   ├── trap.c&#10;│   ├── trap.h&#10;│   └── trapentry.S&#10;└── lib&#10;    ├── fork.c&#10;    ├── ipc.c&#10;    ├── libmain.c&#10;    ├── pFentry.S&#10;    ├── pgfault.c&#10;    └── printfmt.c&#10;&#10;some code are copy from previse works lab1 lab2 lab3">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CODING" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GNUmakefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/.main.c.swp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/Makefrag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/Makefrag.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/boot.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot/sign.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/env.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/lab.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/Makefrag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/bc.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/fs.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/fs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/fsformat.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/ide.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/lorem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/motd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/newmotd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/script" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/serv.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/testshell.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs/testshell.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-lab1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-lab2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-lab3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-lab4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-lab5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradelib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/args.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/assert.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/elf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/env.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/error.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/fd.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/fs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/kbdreg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/lib.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/memlayout.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/mmu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/partition.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/stab.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/stdarg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/stdio.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/string.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/syscall.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/trap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/types.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/x86.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/Makefrag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/console.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/console.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/cpu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/entry.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/entrypgdir.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/env.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/env.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/init.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/kclock.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/kclock.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/kdebug.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/kdebug.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/kernel.ld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/lapic.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/monitor.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/monitor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/mpconfig.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/mpentry.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/picirq.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/picirq.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/pmap.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/pmap.c.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/pmap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/printf.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/sched.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/sched.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/spinlock.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/spinlock.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/syscall.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/syscall.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/trap.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/trap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kern/trapentry.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Makefrag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/args.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/console.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/entry.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/exit.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fd.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/file.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fork.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fprintf.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ipc.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/libmain.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pageref.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/panic.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pfentry.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pgfault.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pipe.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/printf.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/printfmt.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/readline.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/spawn.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/string.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/syscall.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/wait.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mergedep.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapi.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/.deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/.vars.INIT_CFLAGS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/.vars.KERN_CFLAGS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/.vars.KERN_LDFLAGS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/.vars.USER_CFLAGS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/boot/boot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/boot/boot.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/boot/boot.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/boot/boot.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/boot/main.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/bc.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/clean-fs.img" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/fs.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/fs.img" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/fs.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/fsformat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/ide.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/serv.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/fs/test.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/console.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/entry.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/entrypgdir.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/env.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/init.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/kclock.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/kdebug.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/kernel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/kernel.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/kernel.img" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/kernel.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/lapic.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/monitor.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/mpconfig.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/mpentry.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/picirq.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/pmap.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/printf.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/printfmt.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/readline.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/sched.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/spinlock.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/string.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/syscall.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/trap.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/kern/trapentry.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/args.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/console.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/entry.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/exit.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/fd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/file.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/fork.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/fprintf.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/ipc.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/libjos.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/libmain.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/pageref.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/panic.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/pfentry.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/pgfault.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/pipe.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/printf.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/printfmt.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/readline.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/spawn.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/string.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/syscall.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/lib/wait.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/badsegment" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/badsegment.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/badsegment.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/badsegment.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/badsegment.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/breakpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/breakpoint.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/breakpoint.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/breakpoint.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/breakpoint.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello2.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello2.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello2.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/buggyhello2.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/cat.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/cat.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/cat.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/cat.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/divzero" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/divzero.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/divzero.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/divzero.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/divzero.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/dumbfork" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/dumbfork.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/dumbfork.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/dumbfork.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/dumbfork.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/echo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/echo.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/echo.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/echo.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/echo.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/evilhello" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/evilhello.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/evilhello.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/evilhello.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/evilhello.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/fairness" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/fairness.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/fairness.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/fairness.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/fairness.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultalloc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultalloc.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultalloc.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultalloc.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultalloc.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultallocbad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultallocbad.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultallocbad.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultallocbad.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultallocbad.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultbadhandler" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultbadhandler.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultbadhandler.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultbadhandler.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultbadhandler.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultdie" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultdie.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultdie.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultdie.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultdie.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultevilhandler" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultevilhandler.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultevilhandler.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultevilhandler.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultevilhandler.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultio.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultio.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultio.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultio.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultnostack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultnostack.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultnostack.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultnostack.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultnostack.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultread" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultread.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultread.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultread.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultread.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultreadkernel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultreadkernel.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultreadkernel.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultreadkernel.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultreadkernel.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultregs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultregs.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultregs.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultregs.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultregs.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwrite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwrite.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwrite.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwrite.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwrite.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwritekernel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwritekernel.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwritekernel.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwritekernel.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/faultwritekernel.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/forktree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/forktree.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/forktree.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/forktree.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/forktree.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/hello" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/hello.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/hello.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/hello.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/hello.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/icode" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/icode.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/icode.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/icode.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/icode.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/idle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/idle.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/idle.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/idle.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/idle.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/init" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/init.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/init.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/init.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/init.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/ls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/ls.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/ls.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/ls.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/ls.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/lsfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/lsfd.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/lsfd.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/lsfd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/lsfd.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/num" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/num.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/num.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/num.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/num.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpong" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpong.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpong.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpong.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpong.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpongs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpongs.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpongs.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpongs.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/pingpongs.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primes.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primes.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primes.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primes.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primespipe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primespipe.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primespipe.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primespipe.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/primespipe.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sendpage" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sendpage.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sendpage.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sendpage.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sendpage.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sh.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sh.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sh.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/sh.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/softint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/softint.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/softint.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/softint.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/softint.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnfaultio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnfaultio.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnfaultio.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnfaultio.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnfaultio.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnhello" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnhello.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnhello.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnhello.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spawnhello.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spin.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spin.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spin.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/spin.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/stresssched" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/stresssched.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/stresssched.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/stresssched.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/stresssched.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testbss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testbss.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testbss.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testbss.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testbss.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfdsharing" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfdsharing.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfdsharing.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfdsharing.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfdsharing.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfile.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfile.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfile.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testfile.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testkbd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testkbd.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testkbd.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testkbd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testkbd.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpipe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpipe.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpipe.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpipe.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpipe.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace2.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace2.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace2.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpiperace2.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpteshare" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpteshare.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpteshare.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpteshare.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testpteshare.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testshell" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testshell.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testshell.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testshell.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/testshell.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/yield" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/yield.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/yield.debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/yield.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/user/yield.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/Makefrag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/badsegment.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/breakpoint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/buggyhello.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/buggyhello2.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/cat.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/divzero.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/dumbfork.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/echo.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/evilhello.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/fairness.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultalloc.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultallocbad.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultbadhandler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultdie.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultevilhandler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultio.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultnostack.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultread.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultreadkernel.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultregs.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultwrite.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/faultwritekernel.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/forktree.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/hello.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/icode.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/idle.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/init.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/initsh.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/ls.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/lsfd.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/num.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pingpong.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pingpongs.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/primes.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/primespipe.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/sendpage.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/sh.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/softint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/spawnfaultio.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/spawnhello.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/spawninit.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/spin.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/stresssched.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testbss.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testfdsharing.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testfile.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testkbd.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testmalloc.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testpipe.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testpiperace.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testpiperace2.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testptelibrary.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testpteshare.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/testshell.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/user.ld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/writemotd.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/yield.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2y326pm17VZaSalGlodCnai81bc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bee/6.828/lab&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70e1c9e5-86b5-4431-a8c2-45bcae5268d5" name="Changes" comment="" />
+      <created>1749046381739</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749046381739</updated>
+      <workItem from="1749046383929" duration="8000" />
+      <workItem from="1749046403381" duration="1525000" />
+      <workItem from="1749047936795" duration="794000" />
+      <workItem from="1749048765200" duration="369000" />
+    </task>
+    <task id="LOCAL-00001" summary="6.828 lab1 &#10;only update at kern/kdebug.c kern/monitor.c lib/printfmt.c">
+      <created>1749047512067</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749047512067</updated>
+    </task>
+    <task id="LOCAL-00002" summary="6.828 lab1 &#10;only update at &#10;kern/kdebug.c &#10;kern/monitor.c &#10;kern/pmap.c&#10;lib/printfmt.c&#10;&#10;some code are copy from previse work lab1">
+      <created>1749048069450</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749048069450</updated>
+    </task>
+    <task id="LOCAL-00003" summary="6.828 lab1 &#10;update at &#10;├── inc&#10;│   ├── assert.h&#10;│   └── x86.h&#10;├── kern&#10;│   ├── env.c&#10;│   ├── kdebug.c&#10;│   ├── monitor.c&#10;│   ├── pmap.c&#10;│   ├── syscall.c&#10;│   ├── trap.c&#10;│   ├── trap.h&#10;│   └── trapentry.S&#10;└── lib&#10;    ├── libmain.c&#10;    └── printfmt.c&#10;&#10;some code are copy from previse works lab1 lab2">
+      <created>1749048573421</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749048573421</updated>
+    </task>
+    <task id="LOCAL-00004" summary="6.828 lab1 &#10;update at &#10;├── inc&#10;│   ├── assert.h&#10;│   ├── trap.h&#10;│   └── x86.h&#10;├── kern&#10;│   ├── env.c&#10;│   ├── init.c&#10;│   ├── kdebug.c&#10;│   ├── monitor.c&#10;│   ├── pmap.c&#10;│   ├── sched.c&#10;│   ├── syscall.c&#10;│   ├── trap.c&#10;│   ├── trap.h&#10;│   └── trapentry.S&#10;└── lib&#10;    ├── fork.c&#10;    ├── ipc.c&#10;    ├── libmain.c&#10;    ├── pFentry.S&#10;    ├── pgfault.c&#10;    └── printfmt.c&#10;&#10;some code are copy from previse works lab1 lab2 lab3">
+      <created>1749048999665</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749048999665</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="6.828 lab1 &#10;only update at kern/kdebug.c kern/monitor.c lib/printfmt.c" />
+    <MESSAGE value="6.828 lab1 &#10;only update at &#10;kern/kdebug.c &#10;kern/monitor.c &#10;kern/pmap.c&#10;lib/printfmt.c&#10;&#10;some code are copy from previse work lab1" />
+    <MESSAGE value="6.828 lab1 &#10;update at &#10;├── inc&#10;│   ├── assert.h&#10;│   └── x86.h&#10;├── kern&#10;│   ├── env.c&#10;│   ├── kdebug.c&#10;│   ├── monitor.c&#10;│   ├── pmap.c&#10;│   ├── syscall.c&#10;│   ├── trap.c&#10;│   ├── trap.h&#10;│   └── trapentry.S&#10;└── lib&#10;    ├── libmain.c&#10;    └── printfmt.c&#10;&#10;some code are copy from previse works lab1 lab2" />
+    <MESSAGE value="6.828 lab1 &#10;update at &#10;├── inc&#10;│   ├── assert.h&#10;│   ├── trap.h&#10;│   └── x86.h&#10;├── kern&#10;│   ├── env.c&#10;│   ├── init.c&#10;│   ├── kdebug.c&#10;│   ├── monitor.c&#10;│   ├── pmap.c&#10;│   ├── sched.c&#10;│   ├── syscall.c&#10;│   ├── trap.c&#10;│   ├── trap.h&#10;│   └── trapentry.S&#10;└── lib&#10;    ├── fork.c&#10;    ├── ipc.c&#10;    ├── libmain.c&#10;    ├── pFentry.S&#10;    ├── pgfault.c&#10;    └── printfmt.c&#10;&#10;some code are copy from previse works lab1 lab2 lab3" />
+    <option name="LAST_COMMIT_MESSAGE" value="6.828 lab1 &#10;update at &#10;├── inc&#10;│   ├── assert.h&#10;│   ├── trap.h&#10;│   └── x86.h&#10;├── kern&#10;│   ├── env.c&#10;│   ├── init.c&#10;│   ├── kdebug.c&#10;│   ├── monitor.c&#10;│   ├── pmap.c&#10;│   ├── sched.c&#10;│   ├── syscall.c&#10;│   ├── trap.c&#10;│   ├── trap.h&#10;│   └── trapentry.S&#10;└── lib&#10;    ├── fork.c&#10;    ├── ipc.c&#10;    ├── libmain.c&#10;    ├── pFentry.S&#10;    ├── pgfault.c&#10;    └── printfmt.c&#10;&#10;some code are copy from previse works lab1 lab2 lab3" />
+  </component>
+</project>
